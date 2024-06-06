@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:test_image_picker_before_after/second_screen/second_screen.dart';
 
 import '../extensions/extensions.dart';
 
@@ -115,6 +116,13 @@ class FiveImageScreen extends ConsumerWidget {
                 }
               },
               child: const Text('add'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SecondScreen()));
+              },
+              child: const Text('next'),
             ),
           ],
         ),
